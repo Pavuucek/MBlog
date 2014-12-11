@@ -1,6 +1,6 @@
-﻿namespace MBlog
+﻿namespace MBlog.Forms
 {
-    partial class Form1
+    partial class FormMain
     {
         /// <summary>
         /// Vyžadovaná proměnná návrháře.
@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.Text = "FormMain";
         }
 
         #endregion
