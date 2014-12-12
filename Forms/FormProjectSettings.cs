@@ -15,5 +15,25 @@ namespace MBlog.Forms
         {
             InitializeComponent();
         }
+
+        private void buttonRight_Click(object sender, EventArgs e)
+        {
+            if (tabControlSettings.SelectedIndex == tabControlSettings.TabCount)
+            {
+                tabControlSettings.SelectedIndex = 0;
+                return;
+            }
+            tabControlSettings.SelectedIndex++;
+        }
+
+        private void buttonLeft_Click(object sender, EventArgs e)
+        {
+            if (tabControlSettings.SelectedIndex == 0)
+            {
+                tabControlSettings.SelectedIndex = tabControlSettings.TabCount;
+                return;
+            }
+            tabControlSettings.SelectedIndex--;
+        }
     }
 }

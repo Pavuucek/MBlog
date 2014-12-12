@@ -36,28 +36,28 @@
             this.tabControlSettings = new System.Windows.Forms.TabControl();
             this.tabPageBlog = new System.Windows.Forms.TabPage();
             this.tabPageTemplate = new System.Windows.Forms.TabPage();
+            this.buttonFooter = new System.Windows.Forms.Button();
+            this.textBoxFooter = new System.Windows.Forms.TextBox();
+            this.labelFooter = new System.Windows.Forms.Label();
+            this.buttonHeader = new System.Windows.Forms.Button();
+            this.textBoxHeader = new System.Windows.Forms.TextBox();
+            this.labelHeader = new System.Windows.Forms.Label();
+            this.buttonArchivePage = new System.Windows.Forms.Button();
+            this.textBoxArchivePage = new System.Windows.Forms.TextBox();
+            this.labelArchivePage = new System.Windows.Forms.Label();
+            this.buttonTagsPage = new System.Windows.Forms.Button();
+            this.textBoxTagsPage = new System.Windows.Forms.TextBox();
+            this.labelTagsPage = new System.Windows.Forms.Label();
+            this.buttonPostPage = new System.Windows.Forms.Button();
+            this.textBoxPostPage = new System.Windows.Forms.TextBox();
+            this.labelPostPage = new System.Windows.Forms.Label();
+            this.buttonIndex = new System.Windows.Forms.Button();
+            this.textBoxIndex = new System.Windows.Forms.TextBox();
+            this.labelIndex = new System.Windows.Forms.Label();
             this.tabPageGit = new System.Windows.Forms.TabPage();
             this.buttonGit = new System.Windows.Forms.Button();
             this.textBoxGit = new System.Windows.Forms.TextBox();
             this.labelGit = new System.Windows.Forms.Label();
-            this.buttonIndex = new System.Windows.Forms.Button();
-            this.textBoxIndex = new System.Windows.Forms.TextBox();
-            this.labelIndex = new System.Windows.Forms.Label();
-            this.buttonPostPage = new System.Windows.Forms.Button();
-            this.textBoxPostPage = new System.Windows.Forms.TextBox();
-            this.labelPostPage = new System.Windows.Forms.Label();
-            this.buttonTagsPage = new System.Windows.Forms.Button();
-            this.textBoxTagsPage = new System.Windows.Forms.TextBox();
-            this.labelTagsPage = new System.Windows.Forms.Label();
-            this.buttonArchivePage = new System.Windows.Forms.Button();
-            this.textBoxArchivePage = new System.Windows.Forms.TextBox();
-            this.labelArchivePage = new System.Windows.Forms.Label();
-            this.buttonHeader = new System.Windows.Forms.Button();
-            this.textBoxHeader = new System.Windows.Forms.TextBox();
-            this.labelHeader = new System.Windows.Forms.Label();
-            this.buttonFooter = new System.Windows.Forms.Button();
-            this.textBoxFooter = new System.Windows.Forms.TextBox();
-            this.labelFooter = new System.Windows.Forms.Label();
             this.panelBottom.SuspendLayout();
             this.tabControlSettings.SuspendLayout();
             this.tabPageTemplate.SuspendLayout();
@@ -84,6 +84,7 @@
             this.buttonRight.TabIndex = 3;
             this.buttonRight.Text = "Next >>";
             this.buttonRight.UseVisualStyleBackColor = true;
+            this.buttonRight.Click += new System.EventHandler(this.buttonRight_Click);
             // 
             // buttonLeft
             // 
@@ -93,6 +94,7 @@
             this.buttonLeft.TabIndex = 2;
             this.buttonLeft.Text = "<< Prev.";
             this.buttonLeft.UseVisualStyleBackColor = true;
+            this.buttonLeft.Click += new System.EventHandler(this.buttonLeft_Click);
             // 
             // buttonOk
             // 
@@ -164,6 +166,156 @@
             this.tabPageTemplate.Text = "Template";
             this.tabPageTemplate.UseVisualStyleBackColor = true;
             // 
+            // buttonFooter
+            // 
+            this.buttonFooter.Location = new System.Drawing.Point(567, 232);
+            this.buttonFooter.Name = "buttonFooter";
+            this.buttonFooter.Size = new System.Drawing.Size(25, 20);
+            this.buttonFooter.TabIndex = 20;
+            this.buttonFooter.Text = "...";
+            this.buttonFooter.UseVisualStyleBackColor = true;
+            // 
+            // textBoxFooter
+            // 
+            this.textBoxFooter.Location = new System.Drawing.Point(8, 233);
+            this.textBoxFooter.Name = "textBoxFooter";
+            this.textBoxFooter.Size = new System.Drawing.Size(553, 20);
+            this.textBoxFooter.TabIndex = 19;
+            // 
+            // labelFooter
+            // 
+            this.labelFooter.AutoSize = true;
+            this.labelFooter.Location = new System.Drawing.Point(5, 217);
+            this.labelFooter.Name = "labelFooter";
+            this.labelFooter.Size = new System.Drawing.Size(40, 13);
+            this.labelFooter.TabIndex = 18;
+            this.labelFooter.Text = "Footer:";
+            // 
+            // buttonHeader
+            // 
+            this.buttonHeader.Location = new System.Drawing.Point(567, 187);
+            this.buttonHeader.Name = "buttonHeader";
+            this.buttonHeader.Size = new System.Drawing.Size(25, 20);
+            this.buttonHeader.TabIndex = 17;
+            this.buttonHeader.Text = "...";
+            this.buttonHeader.UseVisualStyleBackColor = true;
+            // 
+            // textBoxHeader
+            // 
+            this.textBoxHeader.Location = new System.Drawing.Point(8, 188);
+            this.textBoxHeader.Name = "textBoxHeader";
+            this.textBoxHeader.Size = new System.Drawing.Size(553, 20);
+            this.textBoxHeader.TabIndex = 16;
+            // 
+            // labelHeader
+            // 
+            this.labelHeader.AutoSize = true;
+            this.labelHeader.Location = new System.Drawing.Point(5, 172);
+            this.labelHeader.Name = "labelHeader";
+            this.labelHeader.Size = new System.Drawing.Size(45, 13);
+            this.labelHeader.TabIndex = 15;
+            this.labelHeader.Text = "Header:";
+            // 
+            // buttonArchivePage
+            // 
+            this.buttonArchivePage.Location = new System.Drawing.Point(567, 145);
+            this.buttonArchivePage.Name = "buttonArchivePage";
+            this.buttonArchivePage.Size = new System.Drawing.Size(25, 20);
+            this.buttonArchivePage.TabIndex = 14;
+            this.buttonArchivePage.Text = "...";
+            this.buttonArchivePage.UseVisualStyleBackColor = true;
+            // 
+            // textBoxArchivePage
+            // 
+            this.textBoxArchivePage.Location = new System.Drawing.Point(8, 146);
+            this.textBoxArchivePage.Name = "textBoxArchivePage";
+            this.textBoxArchivePage.Size = new System.Drawing.Size(553, 20);
+            this.textBoxArchivePage.TabIndex = 13;
+            // 
+            // labelArchivePage
+            // 
+            this.labelArchivePage.AutoSize = true;
+            this.labelArchivePage.Location = new System.Drawing.Point(5, 130);
+            this.labelArchivePage.Name = "labelArchivePage";
+            this.labelArchivePage.Size = new System.Drawing.Size(71, 13);
+            this.labelArchivePage.TabIndex = 12;
+            this.labelArchivePage.Text = "ArchivePage:";
+            // 
+            // buttonTagsPage
+            // 
+            this.buttonTagsPage.Location = new System.Drawing.Point(567, 103);
+            this.buttonTagsPage.Name = "buttonTagsPage";
+            this.buttonTagsPage.Size = new System.Drawing.Size(25, 20);
+            this.buttonTagsPage.TabIndex = 11;
+            this.buttonTagsPage.Text = "...";
+            this.buttonTagsPage.UseVisualStyleBackColor = true;
+            // 
+            // textBoxTagsPage
+            // 
+            this.textBoxTagsPage.Location = new System.Drawing.Point(8, 104);
+            this.textBoxTagsPage.Name = "textBoxTagsPage";
+            this.textBoxTagsPage.Size = new System.Drawing.Size(553, 20);
+            this.textBoxTagsPage.TabIndex = 10;
+            // 
+            // labelTagsPage
+            // 
+            this.labelTagsPage.AutoSize = true;
+            this.labelTagsPage.Location = new System.Drawing.Point(5, 88);
+            this.labelTagsPage.Name = "labelTagsPage";
+            this.labelTagsPage.Size = new System.Drawing.Size(62, 13);
+            this.labelTagsPage.TabIndex = 9;
+            this.labelTagsPage.Text = "Tags Page:";
+            // 
+            // buttonPostPage
+            // 
+            this.buttonPostPage.Location = new System.Drawing.Point(567, 60);
+            this.buttonPostPage.Name = "buttonPostPage";
+            this.buttonPostPage.Size = new System.Drawing.Size(25, 20);
+            this.buttonPostPage.TabIndex = 8;
+            this.buttonPostPage.Text = "...";
+            this.buttonPostPage.UseVisualStyleBackColor = true;
+            // 
+            // textBoxPostPage
+            // 
+            this.textBoxPostPage.Location = new System.Drawing.Point(8, 61);
+            this.textBoxPostPage.Name = "textBoxPostPage";
+            this.textBoxPostPage.Size = new System.Drawing.Size(553, 20);
+            this.textBoxPostPage.TabIndex = 7;
+            // 
+            // labelPostPage
+            // 
+            this.labelPostPage.AutoSize = true;
+            this.labelPostPage.Location = new System.Drawing.Point(5, 45);
+            this.labelPostPage.Name = "labelPostPage";
+            this.labelPostPage.Size = new System.Drawing.Size(58, 13);
+            this.labelPostPage.TabIndex = 6;
+            this.labelPostPage.Text = "Post page:";
+            // 
+            // buttonIndex
+            // 
+            this.buttonIndex.Location = new System.Drawing.Point(567, 19);
+            this.buttonIndex.Name = "buttonIndex";
+            this.buttonIndex.Size = new System.Drawing.Size(25, 20);
+            this.buttonIndex.TabIndex = 5;
+            this.buttonIndex.Text = "...";
+            this.buttonIndex.UseVisualStyleBackColor = true;
+            // 
+            // textBoxIndex
+            // 
+            this.textBoxIndex.Location = new System.Drawing.Point(8, 20);
+            this.textBoxIndex.Name = "textBoxIndex";
+            this.textBoxIndex.Size = new System.Drawing.Size(553, 20);
+            this.textBoxIndex.TabIndex = 4;
+            // 
+            // labelIndex
+            // 
+            this.labelIndex.AutoSize = true;
+            this.labelIndex.Location = new System.Drawing.Point(5, 4);
+            this.labelIndex.Name = "labelIndex";
+            this.labelIndex.Size = new System.Drawing.Size(36, 13);
+            this.labelIndex.TabIndex = 3;
+            this.labelIndex.Text = "Index:";
+            // 
             // tabPageGit
             // 
             this.tabPageGit.Controls.Add(this.buttonGit);
@@ -201,156 +353,6 @@
             this.labelGit.Size = new System.Drawing.Size(68, 13);
             this.labelGit.TabIndex = 0;
             this.labelGit.Text = "Git.exe Path:";
-            // 
-            // buttonIndex
-            // 
-            this.buttonIndex.Location = new System.Drawing.Point(567, 19);
-            this.buttonIndex.Name = "buttonIndex";
-            this.buttonIndex.Size = new System.Drawing.Size(25, 20);
-            this.buttonIndex.TabIndex = 5;
-            this.buttonIndex.Text = "...";
-            this.buttonIndex.UseVisualStyleBackColor = true;
-            // 
-            // textBoxIndex
-            // 
-            this.textBoxIndex.Location = new System.Drawing.Point(8, 20);
-            this.textBoxIndex.Name = "textBoxIndex";
-            this.textBoxIndex.Size = new System.Drawing.Size(553, 20);
-            this.textBoxIndex.TabIndex = 4;
-            // 
-            // labelIndex
-            // 
-            this.labelIndex.AutoSize = true;
-            this.labelIndex.Location = new System.Drawing.Point(5, 4);
-            this.labelIndex.Name = "labelIndex";
-            this.labelIndex.Size = new System.Drawing.Size(36, 13);
-            this.labelIndex.TabIndex = 3;
-            this.labelIndex.Text = "Index:";
-            // 
-            // buttonPostPage
-            // 
-            this.buttonPostPage.Location = new System.Drawing.Point(567, 60);
-            this.buttonPostPage.Name = "buttonPostPage";
-            this.buttonPostPage.Size = new System.Drawing.Size(25, 20);
-            this.buttonPostPage.TabIndex = 8;
-            this.buttonPostPage.Text = "...";
-            this.buttonPostPage.UseVisualStyleBackColor = true;
-            // 
-            // textBoxPostPage
-            // 
-            this.textBoxPostPage.Location = new System.Drawing.Point(8, 61);
-            this.textBoxPostPage.Name = "textBoxPostPage";
-            this.textBoxPostPage.Size = new System.Drawing.Size(553, 20);
-            this.textBoxPostPage.TabIndex = 7;
-            // 
-            // labelPostPage
-            // 
-            this.labelPostPage.AutoSize = true;
-            this.labelPostPage.Location = new System.Drawing.Point(5, 45);
-            this.labelPostPage.Name = "labelPostPage";
-            this.labelPostPage.Size = new System.Drawing.Size(58, 13);
-            this.labelPostPage.TabIndex = 6;
-            this.labelPostPage.Text = "Post page:";
-            // 
-            // buttonTagsPage
-            // 
-            this.buttonTagsPage.Location = new System.Drawing.Point(567, 103);
-            this.buttonTagsPage.Name = "buttonTagsPage";
-            this.buttonTagsPage.Size = new System.Drawing.Size(25, 20);
-            this.buttonTagsPage.TabIndex = 11;
-            this.buttonTagsPage.Text = "...";
-            this.buttonTagsPage.UseVisualStyleBackColor = true;
-            // 
-            // textBoxTagsPage
-            // 
-            this.textBoxTagsPage.Location = new System.Drawing.Point(8, 104);
-            this.textBoxTagsPage.Name = "textBoxTagsPage";
-            this.textBoxTagsPage.Size = new System.Drawing.Size(553, 20);
-            this.textBoxTagsPage.TabIndex = 10;
-            // 
-            // labelTagsPage
-            // 
-            this.labelTagsPage.AutoSize = true;
-            this.labelTagsPage.Location = new System.Drawing.Point(5, 88);
-            this.labelTagsPage.Name = "labelTagsPage";
-            this.labelTagsPage.Size = new System.Drawing.Size(62, 13);
-            this.labelTagsPage.TabIndex = 9;
-            this.labelTagsPage.Text = "Tags Page:";
-            // 
-            // buttonArchivePage
-            // 
-            this.buttonArchivePage.Location = new System.Drawing.Point(567, 145);
-            this.buttonArchivePage.Name = "buttonArchivePage";
-            this.buttonArchivePage.Size = new System.Drawing.Size(25, 20);
-            this.buttonArchivePage.TabIndex = 14;
-            this.buttonArchivePage.Text = "...";
-            this.buttonArchivePage.UseVisualStyleBackColor = true;
-            // 
-            // textBoxArchivePage
-            // 
-            this.textBoxArchivePage.Location = new System.Drawing.Point(8, 146);
-            this.textBoxArchivePage.Name = "textBoxArchivePage";
-            this.textBoxArchivePage.Size = new System.Drawing.Size(553, 20);
-            this.textBoxArchivePage.TabIndex = 13;
-            // 
-            // labelArchivePage
-            // 
-            this.labelArchivePage.AutoSize = true;
-            this.labelArchivePage.Location = new System.Drawing.Point(5, 130);
-            this.labelArchivePage.Name = "labelArchivePage";
-            this.labelArchivePage.Size = new System.Drawing.Size(71, 13);
-            this.labelArchivePage.TabIndex = 12;
-            this.labelArchivePage.Text = "ArchivePage:";
-            // 
-            // buttonHeader
-            // 
-            this.buttonHeader.Location = new System.Drawing.Point(567, 187);
-            this.buttonHeader.Name = "buttonHeader";
-            this.buttonHeader.Size = new System.Drawing.Size(25, 20);
-            this.buttonHeader.TabIndex = 17;
-            this.buttonHeader.Text = "...";
-            this.buttonHeader.UseVisualStyleBackColor = true;
-            // 
-            // textBoxHeader
-            // 
-            this.textBoxHeader.Location = new System.Drawing.Point(8, 188);
-            this.textBoxHeader.Name = "textBoxHeader";
-            this.textBoxHeader.Size = new System.Drawing.Size(553, 20);
-            this.textBoxHeader.TabIndex = 16;
-            // 
-            // labelHeader
-            // 
-            this.labelHeader.AutoSize = true;
-            this.labelHeader.Location = new System.Drawing.Point(5, 172);
-            this.labelHeader.Name = "labelHeader";
-            this.labelHeader.Size = new System.Drawing.Size(45, 13);
-            this.labelHeader.TabIndex = 15;
-            this.labelHeader.Text = "Header:";
-            // 
-            // buttonFooter
-            // 
-            this.buttonFooter.Location = new System.Drawing.Point(567, 232);
-            this.buttonFooter.Name = "buttonFooter";
-            this.buttonFooter.Size = new System.Drawing.Size(25, 20);
-            this.buttonFooter.TabIndex = 20;
-            this.buttonFooter.Text = "...";
-            this.buttonFooter.UseVisualStyleBackColor = true;
-            // 
-            // textBoxFooter
-            // 
-            this.textBoxFooter.Location = new System.Drawing.Point(8, 233);
-            this.textBoxFooter.Name = "textBoxFooter";
-            this.textBoxFooter.Size = new System.Drawing.Size(553, 20);
-            this.textBoxFooter.TabIndex = 19;
-            // 
-            // labelFooter
-            // 
-            this.labelFooter.AutoSize = true;
-            this.labelFooter.Location = new System.Drawing.Point(5, 217);
-            this.labelFooter.Name = "labelFooter";
-            this.labelFooter.Size = new System.Drawing.Size(40, 13);
-            this.labelFooter.TabIndex = 18;
-            this.labelFooter.Text = "Footer:";
             // 
             // FormProjectSettings
             // 
