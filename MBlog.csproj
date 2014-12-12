@@ -55,6 +55,7 @@
     <Compile Include="Forms\FormProjectSettings.Designer.cs">
       <DependentUpon>FormProjectSettings.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\BlogProject.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\FormMain.resx">
