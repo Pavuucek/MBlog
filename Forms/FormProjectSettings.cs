@@ -18,7 +18,7 @@ namespace MBlog.Forms
 
         private void buttonRight_Click(object sender, EventArgs e)
         {
-            if (tabControlSettings.SelectedIndex == tabControlSettings.TabCount)
+            if (tabControlSettings.SelectedIndex == tabControlSettings.TabCount - 1)
             {
                 tabControlSettings.SelectedIndex = 0;
                 return;
@@ -30,7 +30,7 @@ namespace MBlog.Forms
         {
             if (tabControlSettings.SelectedIndex == 0)
             {
-                tabControlSettings.SelectedIndex = tabControlSettings.TabCount;
+                tabControlSettings.SelectedIndex = tabControlSettings.TabCount - 1;
                 return;
             }
             tabControlSettings.SelectedIndex--;
