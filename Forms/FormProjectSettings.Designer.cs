@@ -58,8 +58,20 @@
             this.buttonGit = new System.Windows.Forms.Button();
             this.textBoxGit = new System.Windows.Forms.TextBox();
             this.labelGit = new System.Windows.Forms.Label();
+            this.textBoxBlogName = new System.Windows.Forms.TextBox();
+            this.labelBlogName = new System.Windows.Forms.Label();
+            this.textBoxBlogDescription = new System.Windows.Forms.TextBox();
+            this.labelBlogDescription = new System.Windows.Forms.Label();
+            this.textBoxBlogAddress = new System.Windows.Forms.TextBox();
+            this.labelBlogAddress = new System.Windows.Forms.Label();
+            this.buttonOutputPath = new System.Windows.Forms.Button();
+            this.textBoxOutputPath = new System.Windows.Forms.TextBox();
+            this.labelOutputPath = new System.Windows.Forms.Label();
+            this.openFileDialogSettings = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialogSettings = new System.Windows.Forms.SaveFileDialog();
             this.panelBottom.SuspendLayout();
             this.tabControlSettings.SuspendLayout();
+            this.tabPageBlog.SuspendLayout();
             this.tabPageTemplate.SuspendLayout();
             this.tabPageGit.SuspendLayout();
             this.SuspendLayout();
@@ -130,6 +142,15 @@
             // 
             // tabPageBlog
             // 
+            this.tabPageBlog.Controls.Add(this.buttonOutputPath);
+            this.tabPageBlog.Controls.Add(this.textBoxOutputPath);
+            this.tabPageBlog.Controls.Add(this.labelOutputPath);
+            this.tabPageBlog.Controls.Add(this.textBoxBlogAddress);
+            this.tabPageBlog.Controls.Add(this.labelBlogAddress);
+            this.tabPageBlog.Controls.Add(this.textBoxBlogDescription);
+            this.tabPageBlog.Controls.Add(this.labelBlogDescription);
+            this.tabPageBlog.Controls.Add(this.textBoxBlogName);
+            this.tabPageBlog.Controls.Add(this.labelBlogName);
             this.tabPageBlog.Location = new System.Drawing.Point(4, 22);
             this.tabPageBlog.Name = "tabPageBlog";
             this.tabPageBlog.Padding = new System.Windows.Forms.Padding(3);
@@ -354,6 +375,83 @@
             this.labelGit.TabIndex = 0;
             this.labelGit.Text = "Git.exe Path:";
             // 
+            // textBoxBlogName
+            // 
+            this.textBoxBlogName.Location = new System.Drawing.Point(8, 20);
+            this.textBoxBlogName.Name = "textBoxBlogName";
+            this.textBoxBlogName.Size = new System.Drawing.Size(553, 20);
+            this.textBoxBlogName.TabIndex = 7;
+            // 
+            // labelBlogName
+            // 
+            this.labelBlogName.AutoSize = true;
+            this.labelBlogName.Location = new System.Drawing.Point(5, 4);
+            this.labelBlogName.Name = "labelBlogName";
+            this.labelBlogName.Size = new System.Drawing.Size(62, 13);
+            this.labelBlogName.TabIndex = 6;
+            this.labelBlogName.Text = "Blog Name:";
+            // 
+            // textBoxBlogDescription
+            // 
+            this.textBoxBlogDescription.Location = new System.Drawing.Point(8, 62);
+            this.textBoxBlogDescription.Name = "textBoxBlogDescription";
+            this.textBoxBlogDescription.Size = new System.Drawing.Size(553, 20);
+            this.textBoxBlogDescription.TabIndex = 10;
+            // 
+            // labelBlogDescription
+            // 
+            this.labelBlogDescription.AutoSize = true;
+            this.labelBlogDescription.Location = new System.Drawing.Point(5, 46);
+            this.labelBlogDescription.Name = "labelBlogDescription";
+            this.labelBlogDescription.Size = new System.Drawing.Size(87, 13);
+            this.labelBlogDescription.TabIndex = 9;
+            this.labelBlogDescription.Text = "Blog Description:";
+            // 
+            // textBoxBlogAddress
+            // 
+            this.textBoxBlogAddress.Location = new System.Drawing.Point(8, 103);
+            this.textBoxBlogAddress.Name = "textBoxBlogAddress";
+            this.textBoxBlogAddress.Size = new System.Drawing.Size(553, 20);
+            this.textBoxBlogAddress.TabIndex = 12;
+            // 
+            // labelBlogAddress
+            // 
+            this.labelBlogAddress.AutoSize = true;
+            this.labelBlogAddress.Location = new System.Drawing.Point(5, 87);
+            this.labelBlogAddress.Name = "labelBlogAddress";
+            this.labelBlogAddress.Size = new System.Drawing.Size(72, 13);
+            this.labelBlogAddress.TabIndex = 11;
+            this.labelBlogAddress.Text = "Blog Address:";
+            // 
+            // buttonOutputPath
+            // 
+            this.buttonOutputPath.Location = new System.Drawing.Point(569, 146);
+            this.buttonOutputPath.Name = "buttonOutputPath";
+            this.buttonOutputPath.Size = new System.Drawing.Size(25, 20);
+            this.buttonOutputPath.TabIndex = 15;
+            this.buttonOutputPath.Text = "...";
+            this.buttonOutputPath.UseVisualStyleBackColor = true;
+            // 
+            // textBoxOutputPath
+            // 
+            this.textBoxOutputPath.Location = new System.Drawing.Point(10, 147);
+            this.textBoxOutputPath.Name = "textBoxOutputPath";
+            this.textBoxOutputPath.Size = new System.Drawing.Size(553, 20);
+            this.textBoxOutputPath.TabIndex = 14;
+            // 
+            // labelOutputPath
+            // 
+            this.labelOutputPath.AutoSize = true;
+            this.labelOutputPath.Location = new System.Drawing.Point(7, 131);
+            this.labelOutputPath.Name = "labelOutputPath";
+            this.labelOutputPath.Size = new System.Drawing.Size(67, 13);
+            this.labelOutputPath.TabIndex = 13;
+            this.labelOutputPath.Text = "Output Path:";
+            // 
+            // openFileDialogSettings
+            // 
+            this.openFileDialogSettings.FileName = "openFileDialog1";
+            // 
             // FormProjectSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -366,6 +464,8 @@
             this.Text = "Project Settings";
             this.panelBottom.ResumeLayout(false);
             this.tabControlSettings.ResumeLayout(false);
+            this.tabPageBlog.ResumeLayout(false);
+            this.tabPageBlog.PerformLayout();
             this.tabPageTemplate.ResumeLayout(false);
             this.tabPageTemplate.PerformLayout();
             this.tabPageGit.ResumeLayout(false);
@@ -406,5 +506,16 @@
         private System.Windows.Forms.Button buttonPostPage;
         private System.Windows.Forms.TextBox textBoxPostPage;
         private System.Windows.Forms.Label labelPostPage;
+        private System.Windows.Forms.Button buttonOutputPath;
+        private System.Windows.Forms.TextBox textBoxOutputPath;
+        private System.Windows.Forms.Label labelOutputPath;
+        private System.Windows.Forms.TextBox textBoxBlogAddress;
+        private System.Windows.Forms.Label labelBlogAddress;
+        private System.Windows.Forms.TextBox textBoxBlogDescription;
+        private System.Windows.Forms.Label labelBlogDescription;
+        private System.Windows.Forms.TextBox textBoxBlogName;
+        private System.Windows.Forms.Label labelBlogName;
+        private System.Windows.Forms.OpenFileDialog openFileDialogSettings;
+        private System.Windows.Forms.SaveFileDialog saveFileDialogSettings;
     }
 }
