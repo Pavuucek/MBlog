@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace MBlog.Forms
 {
-    public partial class FormSettings : Form
+    public partial class FormProjectSettings : Form
     {
-        public FormSettings()
+        public FormProjectSettings()
         {
             InitializeComponent();
         }
