@@ -21,12 +21,12 @@ namespace MBlog.Model
 
         public bool Load()
         {
-            
+            return true;
         }
 
         public bool Save()
         {
-            
+            return true;
         }
     }
 }
