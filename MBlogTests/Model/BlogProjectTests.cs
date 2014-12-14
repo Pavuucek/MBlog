@@ -12,7 +12,6 @@ namespace MBlog.Model.Tests
     [TestClass()]
     public class BlogProjectTests
     {
-
         public BlogProject project;
 
         [TestInitialize]

@@ -13,7 +13,7 @@ namespace MBlog.Properties
 
 
     /// <summary>
-    ///   Třída prostředků se silnými typy pro hledání lokalizovaných řetězců atp.
+    ///   Třída prostředků se silnými typy, pro hledání lokalizovaných řetězců, atd.
     /// </summary>
     // Tato třída byla automaticky vygenerována třídou StronglyTypedResourceBuilder
     // pomocí nástroje podobného aplikaci ResGen nebo sadou Visual Studio.
