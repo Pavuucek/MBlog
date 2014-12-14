@@ -16,7 +16,11 @@
         </Grid.RowDefinitions>
         <Menu Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
             <MenuItem Name="FileMenuItem" Header="File">
-                <MenuItem Name="NewFileMenuItem" Header="New" ToolTip="New File..."/>
+                <MenuItem Name="NewPostMenuItem" Header="New post" ToolTip="New blog post..." Click="NewPostMenuItem_Click" />
+                <MenuItem Name="OpenPostMenuItem" Header="Open..." ToolTip="Open a blog post..." Click="OpenPostMenuItem_Click" />
+                <MenuItem Name="SaveAsFileMenuItem" Header="Save as file..." ToolTip="Save as file..." Click="SaveAsFileMenuItem_Click" />
+                <Separator />
+                <MenuItem Name="ExitAppMenuItem" Header="Exit" ToolTip="Exit to Desktop" Click="ExitAppMenuItem_Click" />
             </MenuItem>
             <MenuItem Header="MenuItem" />
         </Menu>

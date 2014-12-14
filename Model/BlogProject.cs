@@ -6,6 +6,7 @@ using System.Xml.Serialization;
 namespace MBlog.Model
 {
     [Serializable]
+    [XmlRoot("MBlogProject")]
     public class BlogProject
     {
         public BlogProject()

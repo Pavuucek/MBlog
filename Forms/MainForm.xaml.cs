@@ -1,21 +1,24 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using MarkdownDeep;
+using Microsoft.Win32;
 
 namespace MBlog.Forms
 {
     /// <summary>
-    /// Interakční logika pro MainForm.xaml
+    ///     Interakční logika pro MainForm.xaml
     /// </summary>
     public partial class MainForm
     {
+        private string _markdownBuffer;
+        private readonly Markdown _markdown = new Markdown();
+
         public MainForm()
         {
             InitializeComponent();
         }
-        private readonly Markdown _markdown=new Markdown();
-        private string _markdownBuffer;
 
         private void UpdatePreview()
         {
@@ -25,16 +28,17 @@ namespace MBlog.Forms
             PreviewWebBrowser.NavigateToString(_markdownBuffer);
         }
 
-        private void TextEditor_TextChanged(object sender, System.EventArgs e)
+        private void TextEditor_TextChanged(object sender, EventArgs e)
         {
             UpdatePreview();
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            EventManager.RegisterClassHandler(typeof(FrameworkElement), ToolTipOpeningEvent, new ToolTipEventHandler(ToolTipHandler));
-            EventManager.RegisterClassHandler(typeof(FrameworkElement),
-                  MouseLeaveEvent, new MouseEventHandler(ClearText));
+            EventManager.RegisterClassHandler(typeof (FrameworkElement), ToolTipOpeningEvent,
+                new ToolTipEventHandler(ToolTipHandler));
+            EventManager.RegisterClassHandler(typeof (FrameworkElement),
+                MouseLeaveEvent, new MouseEventHandler(ClearText));
         }
 
         private void ClearText(object sender, MouseEventArgs e)
@@ -52,5 +56,41 @@ namespace MBlog.Forms
             }
         }
 
+        private void NewPostMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            AvalonTextEditor.Text = string.Empty;
+            PreviewWebBrowser.NavigateToString(string.Empty);
+        }
+
+        private void OpenPostMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            var openDialog = new OpenFileDialog
+            {
+                Filter = "MBlog Posts (*.mbpost)|*.mbpost|Markdown files (*.md)|*.md|All Files (*.*)|*.*",
+                DefaultExt = ".mbpost"
+            };
+            if (openDialog.ShowDialog() ?? true)
+            {
+                // TODO: do stuff here.
+            }
+        }
+
+        private void SaveAsFileMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            var saveDialog = new SaveFileDialog
+            {
+                Filter = "MBlog Posts (*.mbpost)|*.mbpost|Markdown files (*.md)|*.md|All Files (*.*)|*.*",
+                DefaultExt = ".mbpost"
+            };
+            if (saveDialog.ShowDialog() ?? true)
+            {
+                // TODO: do stuff here
+            }
+        }
+
+        private void ExitAppMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }
