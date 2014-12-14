@@ -1,9 +1,11 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MBlogTests", "MBlogTests\MBlogTests.csproj", "{7BBEEE72-F883-4CEF-83CD-BC1FA78EABE3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AA3A9381-AE14-4EDC-88E5-997EE39017EE} = {AA3A9381-AE14-4EDC-88E5-997EE39017EE}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MBlog", "MBlog.csproj", "{AA3A9381-AE14-4EDC-88E5-997EE39017EE}"
 EndProject
