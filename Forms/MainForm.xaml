@@ -1,8 +1,18 @@
 ﻿<Window x:Class="MBlog.Forms.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:avalonedit="http://icsharpcode.net/sharpdevelop/avalonedit"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" MinWidth="320" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <avalonedit:TextEditor Name="TextEditor" FontFamily="Consolas" SyntaxHighlighting="MarkDown" FontSize="10pt" Grid.Row="0" Grid.Column="0" />
+        <WebBrowser Name="Preview" Grid.Row="0" Grid.Column="1"></WebBrowser>
     </Grid>
 </Window>
