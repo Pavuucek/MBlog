@@ -1,18 +1,45 @@
-﻿<Window x:Class="MBlog.Forms.MainWindow"
+﻿<Window x:Class="MBlog.Forms.MainForm"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:avalonedit="http://icsharpcode.net/sharpdevelop/avalonedit"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainForm" Height="350" Width="525" Loaded="Window_Loaded">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" MinWidth="320" />
             <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <avalonedit:TextEditor Name="TextEditor" FontFamily="Consolas" SyntaxHighlighting="MarkDown" FontSize="10pt" Grid.Row="0" Grid.Column="0" />
-        <WebBrowser Name="Preview" Grid.Row="0" Grid.Column="1"></WebBrowser>
+        <Menu Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+            <MenuItem Name="FileMenuItem" Header="File">
+                <MenuItem Name="NewFileMenuItem" Header="New" ToolTip="New File..."/>
+            </MenuItem>
+            <MenuItem Header="MenuItem" />
+        </Menu>
+        <avalonedit:TextEditor Name="AvalonTextEditor" FontFamily="Consolas" SyntaxHighlighting="MarkDown"
+                               FontSize="10pt"
+                               Grid.Row="1" Grid.Column="0" TextChanged="TextEditor_TextChanged" />
+        <WebBrowser Name="PreviewWebBrowser" Grid.Row="1" Grid.Column="1" />
+        <StatusBar Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+            </Grid>
+            <StatusBarItem HorizontalAlignment="Left" Grid.Column="0" Grid.Row="0">
+                <TextBlock Name="TooltipTextBlock" />
+            </StatusBarItem>
+            <StatusBarItem HorizontalAlignment="Right" Grid.Column="1" Grid.Row="0">
+                <TextBlock Name="StatusTextBlock" />
+            </StatusBarItem>
+        </StatusBar>
     </Grid>
 </Window>
