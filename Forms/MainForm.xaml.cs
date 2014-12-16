@@ -150,5 +150,15 @@ namespace MBlog.Forms
         private void SaveToBlogButton_Click(object sender, RoutedEventArgs e)
         {
         }
+
+        private void PublishBlogButton_Click(object sender, RoutedEventArgs e)
+        {
+            PublishBlog();
+        }
+
+        private void PublishBlog()
+        {
+            
+        }
     }
 }

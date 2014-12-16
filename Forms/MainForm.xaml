@@ -34,7 +34,7 @@
             </fluent:Ribbon.Menu>
             <fluent:RibbonTabItem Header="Post" Name="PostTabItem">
                 <fluent:RibbonGroupBox Header="Publishing" Name="PublishinGroupBox">
-                    <fluent:Button Header="Publish Blog" Name="PublishBlogButton" />
+                    <fluent:Button Header="Publish Blog" Name="PublishBlogButton" Click="PublishBlogButton_Click" />
                     <fluent:Button Header="Save to Blog" Name="SaveToBlogButton" Click="SaveToBlogButton_Click" />
                     <fluent:Button Header="Save as File" Name="SaveAsFileButton" Click="SaveAsFileButton_Click" />
                 </fluent:RibbonGroupBox>

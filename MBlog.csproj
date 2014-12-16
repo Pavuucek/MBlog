@@ -90,6 +90,7 @@
   <ItemGroup>
     <Compile Include="Model\BlogFile.cs" />
     <Compile Include="Model\BlogFileType.cs" />
+    <Compile Include="Model\BlogGenerator.cs" />
     <Compile Include="Model\BlogPost.cs" />
     <Compile Include="Model\BlogProject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
