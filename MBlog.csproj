@@ -77,9 +77,11 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Components\DateTimePicker\BoolInverter.cs" />
     <Compile Include="Components\DateTimePicker\DateTimePicker.xaml.cs">
       <DependentUpon>DateTimePicker.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Components\DateTimePicker\TextBoxUpDownAdorner.cs" />
     <Compile Include="Forms\MainForm.xaml.cs">
       <DependentUpon>MainForm.xaml</DependentUpon>
       <SubType>Code</SubType>
