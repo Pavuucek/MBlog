@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              StartupUri="Forms/MainForm.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary Source="pack://application:,,,/Fluent;Component/Themes/Office2013/Generic.xaml" />
+
     </Application.Resources>
 </Application>

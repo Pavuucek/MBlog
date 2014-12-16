@@ -2,6 +2,7 @@
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using Fluent;
 using MarkdownDeep;
 using Microsoft.Win32;
 
@@ -10,7 +11,7 @@ namespace MBlog.Forms
     /// <summary>
     ///     Interakční logika pro MainForm.xaml
     /// </summary>
-    public partial class MainForm
+    public partial class MainForm : RibbonWindow
     {
         private string _markdownBuffer;
         private readonly Markdown _markdown = new Markdown();
@@ -56,26 +57,7 @@ namespace MBlog.Forms
             }
         }
 
-        private void NewPostMenuItem_Click(object sender, RoutedEventArgs e)
-        {
-            AvalonTextEditor.Text = string.Empty;
-            PreviewWebBrowser.NavigateToString(string.Empty);
-        }
-
-        private void OpenPostMenuItem_Click(object sender, RoutedEventArgs e)
-        {
-            var openDialog = new OpenFileDialog
-            {
-                Filter = "MBlog Posts (*.mbpost)|*.mbpost|Markdown files (*.md)|*.md|All Files (*.*)|*.*",
-                DefaultExt = ".mbpost"
-            };
-            if (openDialog.ShowDialog() ?? true)
-            {
-                // TODO: do stuff here.
-            }
-        }
-
-        private void SaveAsFileMenuItem_Click(object sender, RoutedEventArgs e)
+        private void SaveAsFileButton_Click(object sender, RoutedEventArgs e)
         {
             var saveDialog = new SaveFileDialog
             {
@@ -88,9 +70,33 @@ namespace MBlog.Forms
             }
         }
 
-        private void ExitAppMenuItem_Click(object sender, RoutedEventArgs e)
+        private void ExitAppButton_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
+        }
+
+        private void NewPostButton_Click(object sender, RoutedEventArgs e)
+        {
+            AvalonTextEditor.Text = string.Empty;
+            PreviewWebBrowser.NavigateToString(string.Empty);
+        }
+
+        private void OpenPostButton_Click(object sender, RoutedEventArgs e)
+        {
+            var openDialog = new OpenFileDialog
+            {
+                Filter = "MBlog Posts (*.mbpost)|*.mbpost|Markdown files (*.md)|*.md|All Files (*.*)|*.*",
+                DefaultExt = ".mbpost"
+            };
+            if (openDialog.ShowDialog() ?? true)
+            {
+                // TODO: do stuff here.
+            }
+        }
+
+        private void SaveToBlogButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

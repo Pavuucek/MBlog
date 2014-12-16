@@ -1,8 +1,9 @@
-﻿<Window x:Class="MBlog.Forms.MainForm"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:avalonedit="http://icsharpcode.net/sharpdevelop/avalonedit"
-        Title="MainForm" Height="350" Width="525" Loaded="Window_Loaded">
+﻿<fluent:RibbonWindow x:Class="MBlog.Forms.MainForm"
+                     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                     xmlns:avalonedit="http://icsharpcode.net/sharpdevelop/avalonedit"
+                     xmlns:fluent="clr-namespace:Fluent;assembly=Fluent"
+                     Title="MainForm" Height="350" Width="525" Loaded="Window_Loaded">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
@@ -14,21 +15,36 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <Menu Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
-            <MenuItem Name="FileMenuItem" Header="File">
-                <MenuItem Name="NewPostMenuItem" Header="New post" ToolTip="New blog post..." Click="NewPostMenuItem_Click" />
-                <MenuItem Name="OpenPostMenuItem" Header="Open..." ToolTip="Open a blog post..." Click="OpenPostMenuItem_Click" />
-                <MenuItem Name="SaveAsFileMenuItem" Header="Save as file..." ToolTip="Save as file..." Click="SaveAsFileMenuItem_Click" />
-                <Separator />
-                <MenuItem Name="ExitAppMenuItem" Header="Exit" ToolTip="Exit to Desktop" Click="ExitAppMenuItem_Click" />
-            </MenuItem>
-            <MenuItem Header="MenuItem" />
-        </Menu>
+        <fluent:Ribbon Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+            <fluent:Ribbon.Menu>
+                <fluent:Backstage>
+                    <fluent:BackstageTabControl>
+                        <fluent:Button Name="NewPostButton" Click="NewPostButton_Click" Header="New Post"/>
+                        <fluent:Button Name="OpenPostButton" Click="OpenPostButton_Click" Header="Open Post"/>
+                        <Separator></Separator>
+                        <fluent:Button Name="ExitAppButton" Click="ExitAppButton_Click" Header="Exit"/>
+                    </fluent:BackstageTabControl>
+                </fluent:Backstage>
+            </fluent:Ribbon.Menu>
+            <fluent:RibbonTabItem Header="Post" Name="PostTabItem">
+                <fluent:RibbonGroupBox Header="Publishing" Name="PublishinGroupBox">
+                    <fluent:Button Header="Publish Blog" Name="PublishBlogButton" />
+                    <fluent:Button Header="Save to Blog" Name="SaveToBlogButton" Click="SaveToBlogButton_Click" />
+                    <fluent:Button Header="Save as File" Name="SaveAsFileButton" Click="SaveAsFileButton_Click" />
+                </fluent:RibbonGroupBox>
+                <fluent:RibbonGroupBox>
+                    <Label>aaaaa</Label>
+                    <fluent:TextBox Header="ddd">ddd</fluent:TextBox>
+                    <TextBox />
+                </fluent:RibbonGroupBox>
+            </fluent:RibbonTabItem>
+        </fluent:Ribbon>
+
         <avalonedit:TextEditor Name="AvalonTextEditor" FontFamily="Consolas" SyntaxHighlighting="MarkDown"
                                FontSize="10pt"
                                Grid.Row="1" Grid.Column="0" TextChanged="TextEditor_TextChanged" />
         <WebBrowser Name="PreviewWebBrowser" Grid.Row="1" Grid.Column="1" />
-        <StatusBar Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
+        <fluent:StatusBar Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
@@ -38,12 +54,12 @@
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
             </Grid>
-            <StatusBarItem HorizontalAlignment="Left" Grid.Column="0" Grid.Row="0">
+            <fluent:StatusBarItem HorizontalAlignment="Left" Grid.Column="0" Grid.Row="0">
                 <TextBlock Name="TooltipTextBlock" />
-            </StatusBarItem>
-            <StatusBarItem HorizontalAlignment="Right" Grid.Column="1" Grid.Row="0">
+            </fluent:StatusBarItem>
+            <fluent:StatusBarItem HorizontalAlignment="Right" Grid.Column="1" Grid.Row="0">
                 <TextBlock Name="StatusTextBlock" />
-            </StatusBarItem>
-        </StatusBar>
+            </fluent:StatusBarItem>
+        </fluent:StatusBar>
     </Grid>
-</Window>
+</fluent:RibbonWindow>
