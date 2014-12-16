@@ -93,6 +93,7 @@
     <Compile Include="Model\BlogGenerator.cs" />
     <Compile Include="Model\BlogPost.cs" />
     <Compile Include="Model\BlogProject.cs" />
+    <Compile Include="Model\BlogTemplate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
