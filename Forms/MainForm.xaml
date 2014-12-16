@@ -3,8 +3,14 @@
                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                      xmlns:avalonedit="http://icsharpcode.net/sharpdevelop/avalonedit"
                      xmlns:fluent="clr-namespace:Fluent;assembly=Fluent"
+                     xmlns:dtPicker="clr-namespace:DTPicker"
                      Title="MainForm" Height="350" Width="525" Loaded="Window_Loaded">
     <Grid>
+        <Grid.Resources>
+            <Style TargetType="{x:Type TextBox}">
+                <Setter Property="MinHeight" Value="21" />
+            </Style>
+        </Grid.Resources>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
@@ -19,10 +25,10 @@
             <fluent:Ribbon.Menu>
                 <fluent:Backstage>
                     <fluent:BackstageTabControl>
-                        <fluent:Button Name="NewPostButton" Click="NewPostButton_Click" Header="New Post"/>
-                        <fluent:Button Name="OpenPostButton" Click="OpenPostButton_Click" Header="Open Post"/>
-                        <Separator></Separator>
-                        <fluent:Button Name="ExitAppButton" Click="ExitAppButton_Click" Header="Exit"/>
+                        <fluent:Button Name="NewPostButton" Click="NewPostButton_Click" Header="New Post" />
+                        <fluent:Button Name="OpenPostButton" Click="OpenPostButton_Click" Header="Open Post" />
+                        <Separator />
+                        <fluent:Button Name="ExitAppButton" Click="ExitAppButton_Click" Header="Exit" />
                     </fluent:BackstageTabControl>
                 </fluent:Backstage>
             </fluent:Ribbon.Menu>
@@ -32,10 +38,16 @@
                     <fluent:Button Header="Save to Blog" Name="SaveToBlogButton" Click="SaveToBlogButton_Click" />
                     <fluent:Button Header="Save as File" Name="SaveAsFileButton" Click="SaveAsFileButton_Click" />
                 </fluent:RibbonGroupBox>
-                <fluent:RibbonGroupBox>
-                    <Label>aaaaa</Label>
-                    <fluent:TextBox Header="ddd">ddd</fluent:TextBox>
-                    <TextBox />
+                <fluent:RibbonGroupBox Header="Post Properties">
+                    <Label>Post Title:</Label>
+                    <TextBox Name="PostNameTextBox" />
+                    <Separator></Separator>
+                    <Label>Date Published:</Label>
+                    <dtPicker:DateTimePicker x:Name="PostDateTimePicker" />
+                    <Separator />
+                    <Label>Post Tags:</Label>
+                    <TextBox Name="PostTagsTextBox"/>
+                    <Separator />
                 </fluent:RibbonGroupBox>
             </fluent:RibbonTabItem>
         </fluent:Ribbon>
